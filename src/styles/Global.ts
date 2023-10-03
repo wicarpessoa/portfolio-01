@@ -1,3 +1,9 @@
+import { createGlobalStyle } from 'styled-components'
+import { variables } from './themes/variables'
+
+export const GlobalStyle = createGlobalStyle`
+${variables}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,9 +11,9 @@
 }
 
 body {
-	--ff-primary: "Roboto", sans-serif;
-	--ff-title: "Space Grotesk", sans-serif;
+
 	font-family: var(--ff-primary);
+	background-color: var(--gray-900);
 }
 h1,
 h2 {
@@ -22,11 +28,13 @@ a {
 }
 
 .container {
-	background-color: #111111;
+	margin: 0 auto;
 	width: 100%;
+	max-width: 100rem;
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	padding: 4rem;
 	gap: 6rem;
 }
+`

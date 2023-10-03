@@ -1,5 +1,6 @@
+import { StackTag } from '../../components/StackTag'
 import { AboutContainer, AboutImgContainer, AboutTextContainer } from './styles'
-
+import { Atom } from '@phosphor-icons/react'
 export function About() {
   return (
     <AboutContainer>
@@ -13,11 +14,36 @@ export function About() {
         </p>
         <p>Here are a few technologies I’ve been working with recently:</p>
         <ul>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Next.js</li>
-          <li>Taildwind.css</li>
+          <li>
+            <StackTag title="React">
+              <Atom size={20} />
+            </StackTag>
+          </li>
+          <li>
+            <StackTag title="TypeScript">
+              <Atom size={20} />
+            </StackTag>
+          </li>
+          <li>
+            <StackTag title="Next.js">
+              <Atom size={20} />
+            </StackTag>
+          </li>
+          <li>
+            <StackTag title="Tailwind.css">
+              <Atom size={20} />
+            </StackTag>
+          </li>
+          <li>
+            <StackTag title="Node">
+              <Atom size={20} />
+            </StackTag>
+          </li>
+          <li>
+            <StackTag title="Styled-Components">
+              <Atom size={20} />
+            </StackTag>
+          </li>
         </ul>
       </AboutTextContainer>
       <AboutImgContainer>

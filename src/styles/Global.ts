@@ -30,7 +30,7 @@ a {
 .container {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 100rem;
+	max-width: 70rem;
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;

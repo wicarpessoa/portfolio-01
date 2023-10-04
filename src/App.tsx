@@ -1,3 +1,4 @@
+import { ProjectCard } from './components/ProjectCard'
 import { About } from './sections/About'
 import { Hero } from './sections/Hero'
 import { GlobalStyle } from './styles/Global'
@@ -6,6 +7,7 @@ export function App() {
     <div className="container">
       <Hero />
       <About />
+      <ProjectCard />
       <GlobalStyle />
     </div>
   )

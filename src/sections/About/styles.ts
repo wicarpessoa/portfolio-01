@@ -50,20 +50,21 @@ export const AboutTextContainer = styled.div`
 `
 export const AboutImgContainer = styled.div`
   position: relative;
-  z-index: 0;
   transition: 0.5s all;
   img {
-    height: 17rem;
     width: 17rem;
+    height: 17rem;
     border-radius: 4px;
   }
   > div {
     position: absolute;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 17rem;
+    height: 17rem;
     top: 0;
     left: 0;
+    border-radius: 4px;
+
     background-color: var(--orange-300);
     opacity: 0.3;
     transition: 0.5s all;

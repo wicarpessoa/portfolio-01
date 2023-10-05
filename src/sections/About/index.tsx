@@ -35,7 +35,7 @@ export function About() {
             </StackTag>
           </li>
           <li>
-            <StackTag title="Node">
+            <StackTag title="Node.jkss">
               <Atom size={20} />
             </StackTag>
           </li>

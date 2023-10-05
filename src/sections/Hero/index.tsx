@@ -12,7 +12,9 @@ export function Hero() {
         designing) exceptional digital experiences. Currently, I’m focused on
         building accessible,
       </p>
-      <Button title="hire me !" />
+      <a href="./src/assets/resume.pdf" download>
+        <Button title="Resume" />
+      </a>
     </HeroContainer>
   )
 }

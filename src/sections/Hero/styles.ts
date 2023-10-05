@@ -6,9 +6,8 @@ export const HeroContainer = styled.section`
   color: white;
   justify-content: center;
   align-items: flex-start;
-  margin: 0 auto;
   > span {
-    color: #fa4500;
+    color: var(--orange-300);
   }
   > h1 {
     font-size: 5rem;

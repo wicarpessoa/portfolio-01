@@ -1,12 +1,18 @@
 import { Folder, GithubLogo } from '@phosphor-icons/react'
-import { ProjectCardContainer, ProjectCardImgContainer, ProjectCardTextContainer } from './styles'
+import {
+  ProjectCardContainer,
+  ProjectCardImgContainer,
+  ProjectCardTextContainer,
+} from './styles'
 
 export function ProjectCard() {
   return (
     <ProjectCardContainer>
       <ProjectCardTextContainer>
         <span>Featured Project</span>
-        <h3>Spotify Profile</h3>
+        <a href="" target="_blank">
+          Spotify Profile
+        </a>
         <div>
           <p>
             A web app for visualizing personalized Spotify data. View your top
@@ -34,7 +40,10 @@ export function ProjectCard() {
           </a>
         </div>
       </ProjectCardTextContainer>
-      <ProjectCardImgContainer />
+      <ProjectCardImgContainer>
+        <img src="https://i.imgur.com/RilVzcA.png" />
+        <a />
+      </ProjectCardImgContainer>
     </ProjectCardContainer>
   )
 }

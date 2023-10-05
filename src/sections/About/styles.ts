@@ -2,12 +2,10 @@ import styled from 'styled-components'
 
 export const AboutContainer = styled.section`
   display: flex;
-  color: white;
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
   gap: 3rem;
-  max-width: 60rem;
 `
 export const AboutTextContainer = styled.div`
   display: flex;
@@ -19,6 +17,7 @@ export const AboutTextContainer = styled.div`
     position: relative;
     white-space: nowrap;
     gap: 0.5rem;
+    color: var(--gray-100);
   }
   > h2::before {
     content: '01. ';

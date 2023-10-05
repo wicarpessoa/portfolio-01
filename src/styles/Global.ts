@@ -37,4 +37,7 @@ a {
 	padding: 4rem;
 	gap: 6rem;
 }
+.social {
+	
+}
 `

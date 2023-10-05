@@ -39,6 +39,6 @@ a {
 	max-width: 70rem;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 	padding: 4rem}
 	`

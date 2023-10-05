@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion'
+import { MotionProps, motion } from 'framer-motion'
 import styled from 'styled-components'
 
 interface NavItemProps {
   index: string
 }
 
-export const NavBarContainer = styled(motion.div)`
+export const NavBarContainer = styled(motion.div)<MotionProps>`
   position: fixed;
   top: 0;
   left: 0;

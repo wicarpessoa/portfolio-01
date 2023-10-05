@@ -1,24 +1,13 @@
 import { useRef } from 'react'
 import { StackTag } from '../../components/StackTag'
-import { useIsOnScreen } from '../../hooks/useIsOnScreen'
+import {
+  childAnimation,
+  staggeredAnimation,
+  useIsOnScreen,
+} from '../../hooks/useIsOnScreen'
 import { AboutContainer, AboutImgContainer, AboutTextContainer } from './styles'
 import { Atom } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
-
-const staggeredAnimation = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2, // This is the delay between each child
-    },
-  },
-}
-
-const childAnimation = {
-  hidden: { opacity: 0, x: 20 },
-  visible: { opacity: 1, x: 0.2 },
-}
 
 export function About() {
   const ref = useRef<HTMLDivElement | null>(null)

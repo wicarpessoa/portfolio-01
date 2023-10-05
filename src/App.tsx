@@ -1,3 +1,4 @@
+import { NavBar } from './components/NavBar'
 import { Social } from './components/Social'
 import { About } from './sections/About'
 import { Hero } from './sections/Hero'
@@ -6,6 +7,7 @@ import { GlobalStyle } from './styles/Global'
 export function App() {
   return (
     <div className="container">
+      <NavBar />
       <Hero />
       <About />
       <Projects />

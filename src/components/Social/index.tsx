@@ -15,7 +15,11 @@ export function Social() {
           </a>
         </li>
         <li>
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/wicar-pessoa-5b359b233/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <LinkedinLogo size={24} />
           </a>
         </li>

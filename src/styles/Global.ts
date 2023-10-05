@@ -35,7 +35,6 @@ a {
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
 	padding: 4rem;
-	gap: 6rem;
 }
 .social {
 	

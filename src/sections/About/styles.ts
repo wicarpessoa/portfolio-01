@@ -1,13 +1,14 @@
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const AboutContainer = styled.section`
+export const AboutContainer = styled(motion.section)`
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
   gap: 3rem;
 `
-export const AboutTextContainer = styled.div`
+export const AboutTextContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 1rem;

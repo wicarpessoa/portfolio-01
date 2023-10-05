@@ -9,17 +9,23 @@ ${variables}
 	padding: 0;
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+
+}
 
 body {
 
 	font-family: var(--ff-primary);
 	background-color: var(--gray-900);
+
 }
 h1,
 h2 {
 	font-family: var(--ff-title);
 	line-height: 1;
 }
+
 p,
 span,
 button,
@@ -34,9 +40,5 @@ a {
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr 1fr 1fr;
-	padding: 4rem;
-}
-.social {
-	
-}
-`
+	padding: 4rem}
+	`

@@ -3,7 +3,7 @@ import { HeroContainer } from './styles'
 
 export function Hero() {
   return (
-    <HeroContainer>
+    <HeroContainer id="hero">
       <span>Hi, my name is</span>
       <h1>Wicar Pessoa.</h1>
       <h2>Im a Front end developer.</h2>

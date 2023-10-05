@@ -3,7 +3,7 @@ import { ProjectsContainer } from './styles'
 
 export function Projects() {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projetos">
       <h2>Projetos</h2>
       <ProjectCard />
     </ProjectsContainer>

@@ -1,16 +1,19 @@
 import { useState, useEffect } from 'react'
-import { useAnimation, motion } from 'framer-motion'
+import { useAnimation } from 'framer-motion'
+import { NavBarContainer, NavItem } from './styles'
 
 export function NavBar() {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [shouldShowActions, setShouldShowActions] = useState(true)
   const controls = useAnimation()
+
+  const sections = ['sobre', 'projetos', 'experiência', 'contato']
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
       const scrollUp = scrollY < lastScrollY
 
-      // If scrolling up, show the navbar, otherwise hide it
       if (scrollUp) {
         setShouldShowActions(true)
       } else {
@@ -35,21 +38,22 @@ export function NavBar() {
     }
   }, [shouldShowActions, controls])
   return (
-    <motion.div
+    <NavBarContainer
       initial={{ y: -60, opacity: 0 }}
       animate={controls}
       transition={{ duration: 0.5 }}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: '60px',
-        background: 'white',
-        zIndex: 3,
-      }}
     >
-      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    </motion.div>
+      <img src="" alt="" />
+      <ul>
+        {sections.map((section, index) => {
+          const IndexWithTwoDigits = (index + 1).toString().padStart(2, '0')
+          return (
+            <NavItem key={section} index={IndexWithTwoDigits}>
+              <a href={`#${section}`}>{section}</a>
+            </NavItem>
+          )
+        })}
+      </ul>
+    </NavBarContainer>
   )
 }

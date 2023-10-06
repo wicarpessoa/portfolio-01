@@ -21,7 +21,7 @@ export const ProjectCardTextContainer = styled.div`
     color: var(--gray-300);
     margin-top: 1rem;
     text-decoration: none;
-    transition: 0.5s all;
+    transition: var(--trasition);
     &:hover {
       color: var(--orange-700);
     }
@@ -37,11 +37,16 @@ export const ProjectCardTextContainer = styled.div`
       0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
   > ul {
+    width: 100%;
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
     color: var(--gray-400);
     margin-top: 2rem;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    > li {
+    }
   }
   div:nth-child(5) {
     margin-top: 8px;
@@ -61,17 +66,27 @@ export const ProjectCardTextContainer = styled.div`
       }
     }
   }
+  @media (max-width: 768px) {
+    grid-area: 1/1/-1/-1;
+    padding: 1rem;
+    > div:nth-child(3) {
+      background-color: transparent;
+    }
+  }
 `
 
 export const ProjectCardImgContainer = styled.div`
-  grid-area: 1 / 6 / -1 / -1;
+  grid-area: 1 / 6/-1 / -1;
   position: absolute;
   right: 0;
   border-radius: 8px;
   height: 100%;
+  overflow: hidden;
   > img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 8px;
   }
   > a {
@@ -85,11 +100,17 @@ export const ProjectCardImgContainer = styled.div`
 
     cursor: pointer;
 
-    background-color: var(--orange-300);
-    opacity: 0.3;
+    background-color: var(--orange-700-30);
+
     transition: 0.5s all;
     &:hover {
       opacity: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    grid-area: 1/1/-1/-1;
+    > a {
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
 `

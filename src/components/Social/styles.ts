@@ -18,7 +18,7 @@ export const SocialContainer = styled.div`
     cursor: pointer;
     color: var(--gray-300);
 
-    transition: 0.5s all;
+    transition: var(--trasition);
     &:hover {
       color: var(--orange-300);
     }
@@ -30,5 +30,13 @@ export const SocialContainer = styled.div`
     width: 1px;
     height: 5rem;
     background-color: var(--gray-700);
+  }
+  @media (max-width: 768px) {
+    > div {
+      display: none;
+    }
+    > ul {
+      display: flex;
+    }
   }
 `

@@ -1,6 +1,7 @@
+import { MotionProps, motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const ProjectsContainer = styled.section`
+export const ProjectsContainer = styled(motion.section)<MotionProps>`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -31,6 +32,6 @@ export const ProjectsContainer = styled.section`
   > div {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 5rem;
   }
 `

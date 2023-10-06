@@ -8,6 +8,10 @@ export const AboutContainer = styled(motion.section)<MotionProps>`
   margin: 0 auto;
   gap: 3rem;
   padding: 8rem 0;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 export const AboutTextContainer = styled(motion.div)<MotionProps>`
   display: flex;
@@ -50,7 +54,7 @@ export const AboutTextContainer = styled(motion.div)<MotionProps>`
 `
 export const AboutImgContainer = styled.div`
   position: relative;
-  transition: 0.5s all;
+  transition: var(--trasition);
   img {
     width: 17rem;
     height: 17rem;
@@ -67,7 +71,7 @@ export const AboutImgContainer = styled.div`
 
     background-color: var(--orange-300);
     opacity: 0.3;
-    transition: 0.5s all;
+    transition: var(--trasition);
     &:hover {
       opacity: 0;
     }
@@ -86,7 +90,7 @@ export const AboutImgContainer = styled.div`
     top: 1rem;
     left: 1rem;
     border-radius: 4px;
-    transition: 0.5s all;
+    transition: var(--trasition);
   }
   &:hover::after {
     transform: translate(10px, 10px);

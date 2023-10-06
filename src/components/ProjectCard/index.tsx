@@ -5,31 +5,41 @@ import {
   ProjectCardTextContainer,
 } from './styles'
 
-export function ProjectCard() {
+export interface ProjectCardProps {
+  title: string
+  description: string
+  tags: string[]
+  repoUrl: string
+  deployUrl: string
+  imgUrl: string
+}
+
+export function ProjectCard({
+  title,
+  description,
+  tags,
+  repoUrl,
+  deployUrl,
+  imgUrl,
+}: ProjectCardProps) {
   return (
     <ProjectCardContainer>
       <ProjectCardTextContainer>
         <span>Featured Project</span>
-        <a href="" target="_blank">
-          Spotify Profile
+        <a href={deployUrl} target="_blank" rel="noreferrer">
+          {title}
         </a>
         <div>
-          <p>
-            A web app for visualizing personalized Spotify data. View your top
-            artists, top tracks, recently played tracks, and detailed audio
-            information about each track. Create and save new playlists of
-            recommended tracks based on your existing playlists and more.
-          </p>
+          <p>{description}</p>
         </div>
         <ul>
-          <li>React</li>
-          <li>React</li>
-          <li>React</li>
-          <li>React</li>
+          {tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
         </ul>
         <div>
           <a
-            href="https://github.com/wicarpessoa"
+            href={`https://github.com/wicarpessoa/${repoUrl}`}
             target="_blank"
             rel="noreferrer"
           >
@@ -41,7 +51,7 @@ export function ProjectCard() {
         </div>
       </ProjectCardTextContainer>
       <ProjectCardImgContainer>
-        <img src="https://i.imgur.com/RilVzcA.png" />
+        <img src={imgUrl} />
         <a />
       </ProjectCardImgContainer>
     </ProjectCardContainer>

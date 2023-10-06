@@ -1,17 +1,34 @@
 import { useRef } from 'react'
 import { StackTag } from '../../components/StackTag'
 import {
-  childAnimation,
   staggeredAnimation,
   useIsOnScreenOnce,
 } from '../../hooks/useIsOnScreenOnce'
 import { AboutContainer, AboutImgContainer, AboutTextContainer } from './styles'
 import { Atom } from '@phosphor-icons/react'
-import { motion } from 'framer-motion'
-
+const experienceTags = [
+  {
+    title: 'React.js',
+  },
+  {
+    title: 'TypeScript',
+  },
+  {
+    title: 'Next.js',
+  },
+  {
+    title: 'Tailwind.css',
+  },
+  {
+    title: 'Node.js',
+  },
+  {
+    title: 'Styled-Components',
+  },
+]
 export function About() {
   const ref = useRef<HTMLDivElement | null>(null)
-  const onScreen = useIsOnScreenOnce(ref, 0.3)
+  const onScreen = useIsOnScreenOnce(ref, 0.7)
   console.log(onScreen)
   return (
     <AboutContainer
@@ -20,51 +37,42 @@ export function About() {
       ref={ref}
       initial="hidden"
       animate={onScreen ? 'visible' : 'hidden'}
-      transition={{ duration: 2 }}
+      transition={{ ease: [0.16, 1, 0.3, 1] }}
     >
-      <AboutTextContainer variants={staggeredAnimation}>
-        <motion.h2 variants={childAnimation}>About Me</motion.h2>
-        <motion.p variants={childAnimation}>
-          Hello! My name is Brittany and I enjoy creating things that live on
-          the internet. My interest in web development started back in 2012 when
-          I decided to try editing custom Tumblr themes — turns out hacking
-          together a custom reblog button taught me a lot about HTML & CSS!
-        </motion.p>
-        <motion.p variants={childAnimation}>
-          Here are a few technologies I’ve been working with recently:
-        </motion.p>
-        <motion.ul variants={childAnimation}>
-          <li>
-            <StackTag title="React">
-              <Atom size={20} />
-            </StackTag>
-          </li>
-          <li>
-            <StackTag title="TypeScript">
-              <Atom size={20} />
-            </StackTag>
-          </li>
-          <li>
-            <StackTag title="Next.js">
-              <Atom size={20} />
-            </StackTag>
-          </li>
-          <li>
-            <StackTag title="Tailwind.css">
-              <Atom size={20} />
-            </StackTag>
-          </li>
-          <li>
-            <StackTag title="Node.jkss">
-              <Atom size={20} />
-            </StackTag>
-          </li>
-          <li>
-            <StackTag title="Styled-Components">
-              <Atom size={20} />
-            </StackTag>
-          </li>
-        </motion.ul>
+      <AboutTextContainer>
+        <h2>Sobre mim</h2>
+
+        <p>
+          Olá! Meu nome é Wicar Pessoa e sou apaixonado por dar vida a ideias na
+          internet. Meu mergulho no mundo do desenvolvimento web iniciou em
+          2022, e desde então, tenho dedicado cada dia para aprimorar meus
+          conhecimentos e habilidades.
+        </p>
+        <p>
+          Ao longo deste último ano como desenvolvedor, adotei o aprendizado
+          contínuo como meu mantra. Estou constantemente buscando novos
+          conhecimentos e técnicas para criar aplicações mais eficientes, com
+          funcionalidades práticas que podem facilitar e melhorar a experiência
+          dos usuários.
+        </p>
+        <p>
+          Trabalhar com tecnologia não é apenas uma profissão para mim, mas uma
+          paixão que combina desafios e inovação. E a cada projeto, busco não
+          apenas codificar, mas também incorporar o que aprendi, garantindo
+          assim resultados de alta qualidade.
+        </p>
+        <p>Aqui alguma tecnologias que eu venho usando Recentemente:</p>
+        <ul>
+          {experienceTags.map((experienceTag) => {
+            return (
+              <li key={experienceTag.title}>
+                <StackTag title={experienceTag.title}>
+                  <Atom size={20} />
+                </StackTag>
+              </li>
+            )
+          })}
+        </ul>
       </AboutTextContainer>
       <AboutImgContainer>
         <img src="./src/assets/profile.jpg" alt="" />

@@ -11,7 +11,9 @@ ${variables}
 }
 html {
 	scroll-behavior: smooth;
-
+	@media (max-width: 768px) {
+  font-size: 87.5%;
+}
 }
 
 body {
@@ -44,5 +46,8 @@ label {
 	display: grid;
 	grid-template-rows: auto;
 	padding: 4rem 4rem 0;
+	@media (max-width: 768px) {
+		padding: 2rem 2rem 0;
+}
 }
 	`

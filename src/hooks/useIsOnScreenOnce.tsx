@@ -35,8 +35,9 @@ function useIsOnScreenOnce<T extends Element>(
 }
 
 const staggeredAnimation: Variants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, y: 100 },
   visible: {
+    y: 0,
     opacity: 1,
     transition: {
       staggerChildren: 0.2,
@@ -46,7 +47,26 @@ const staggeredAnimation: Variants = {
 
 const childAnimation: Variants = {
   hidden: { opacity: 0, x: 20 },
-  visible: { opacity: 1, x: 0.2 },
+  visible: { opacity: 1, x: 0 },
 }
-
-export { useIsOnScreenOnce, staggeredAnimation, childAnimation }
+const sidebarVariants = {
+  open: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 250,
+      damping: 20,
+    },
+  },
+  closed: {
+    x: '100%',
+    opacity: 0.8,
+  },
+}
+export {
+  useIsOnScreenOnce,
+  staggeredAnimation,
+  childAnimation,
+  sidebarVariants,
+}

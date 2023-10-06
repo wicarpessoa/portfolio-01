@@ -1,6 +1,7 @@
+import { MotionProps, motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const ExperienceContainer = styled.div`
+export const ExperienceContainer = styled(motion.section)<MotionProps>`
   display: flex;
   flex-direction: column;
   gap: 1rem;

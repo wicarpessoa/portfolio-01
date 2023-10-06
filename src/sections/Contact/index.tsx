@@ -1,9 +1,15 @@
 import { FormEvent, useRef } from 'react'
 import { ContactContainer } from './styles'
 import emailjs from '@emailjs/browser'
+import {
+  staggeredAnimation,
+  useIsOnScreenOnce,
+} from '../../hooks/useIsOnScreenOnce'
 import { Button } from '../../components/Button'
 export function Contact() {
   const form = useRef<HTMLFormElement>(null)
+  const ref = useRef<HTMLDivElement | null>(null)
+  const onScreen = useIsOnScreenOnce(ref, 0.5)
 
   function sendEmail(e: FormEvent) {
     e.preventDefault()
@@ -29,17 +35,39 @@ export function Contact() {
     }
   }
   return (
-    <ContactContainer id="contato">
+    <ContactContainer
+      id="contato"
+      variants={staggeredAnimation}
+      ref={ref}
+      initial="hidden"
+      animate={onScreen ? 'visible' : 'hidden'}
+      transition={{ ease: [0.16, 1, 0.3, 1] }}
+    >
       <h2>Contato</h2>
       <h3>Por Email:</h3>
       <form ref={form} action="" onSubmit={sendEmail}>
-        <label htmlFor="user_name">Full Name</label>
-        <input type="text" name="user_name" placeholder="Name" required />
+        <label htmlFor="user_name">Nome</label>
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Digite seu nome..."
+          required
+        />
         <label htmlFor="user_email">Email</label>
-        <input type="email" name="user_email" placeholder="Email" required />
-        <label htmlFor="subject">Subject</label>
-        <input type="text" placeholder="Subject" name="subject" required />
-        <label htmlFor="message">mensagem</label>
+        <input
+          type="email"
+          name="user_email"
+          placeholder="Digite seu email..."
+          required
+        />
+        <label htmlFor="subject">Assunto</label>
+        <input
+          type="text"
+          placeholder="Digite o assunto..."
+          name="subject"
+          required
+        />
+        <label htmlFor="message">Mensagem</label>
         <textarea
           required
           cols={30}

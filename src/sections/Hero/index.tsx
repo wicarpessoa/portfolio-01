@@ -18,15 +18,15 @@ export function Hero() {
       ref={ref}
       initial="hidden"
       animate={onScreen ? 'visible' : 'hidden'}
-      transition={{ duration: 2 }}
+      transition={{ ease: [0.16, 1, 0.3, 1] }}
     >
-      <motion.span variants={childAnimation}>Hi, my name is</motion.span>
+      <motion.span variants={childAnimation}>Oi, Meu nome é</motion.span>
       <motion.h1 variants={childAnimation}>Wicar Pessoa.</motion.h1>
-      <motion.h2 variants={childAnimation}>Im a Front end developer.</motion.h2>
+      <motion.h2 variants={childAnimation}>Sou um Dev Front-end</motion.h2>
       <motion.p variants={childAnimation}>
-        I’ m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building accessible,
+        Sou um desenvolvedor Front-end dedicado a criar aplicações que não só
+        proporcionam experiências excepcionais para os usuários, mas que também
+        são acessíveis e intuitivas para todos.
       </motion.p>
       <motion.a
         variants={childAnimation}

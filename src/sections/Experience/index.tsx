@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { TabItem } from '../../components/TabItem'
 import { ExperienceContainer, ExperienceContentContainer } from './styles'
+import {
+  staggeredAnimation,
+  useIsOnScreenOnce,
+} from '../../hooks/useIsOnScreenOnce'
 
 export function Experience() {
   const [activeTab, setActiveTab] = useState('tab1')
+  const ref = useRef<HTMLDivElement | null>(null)
+  const onScreen = useIsOnScreenOnce(ref, 0.5)
   const TABS = [
     {
       value: 'tab1',
@@ -22,8 +28,15 @@ export function Experience() {
   ]
   const activeTabContent = TABS.find((tab) => tab.value === activeTab)
   return (
-    <ExperienceContainer>
-      <h2>About Me</h2>
+    <ExperienceContainer
+      id="experiencia"
+      variants={staggeredAnimation}
+      ref={ref}
+      initial="hidden"
+      animate={onScreen ? 'visible' : 'hidden'}
+      transition={{ ease: [0.16, 1, 0.3, 1] }}
+    >
+      <h2>Experiências</h2>
       <div>
         <ul>
           {TABS.map((tab) => (

@@ -10,7 +10,7 @@ const variables = css`
     --gray-500: #7c7c8a;
     --gray-600: #323238;
     --gray-700: #29292e;
-    --gray-800: #202024;
+    --gray-800: #141414;
     --gray-900: #121214;
 
     --red-500: #ab222e;
@@ -23,10 +23,13 @@ const variables = css`
     --orange-500: #e22b00;
     --orange-600: #d13f00;
     --orange-700: #c23400;
-    --orange-700-70: rgba(194, 52, 0, 0.3);
+    --orange-700-30: rgba(194, 52, 0, 0.3);
+    --orange-700-70: rgba(194, 52, 0, 0.7);
 
     --ff-primary: 'Roboto', sans-serif;
     --ff-title: 'Space Grotesk', sans-serif;
+
+    --trasition: 400ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 `
 export { variables }

@@ -1,5 +1,4 @@
 import { NavBar } from './components/NavBar'
-import { Social } from './components/Social'
 import { About } from './sections/About'
 import { Contact } from './sections/Contact'
 import { Experience } from './sections/Experience'
@@ -15,7 +14,6 @@ export function App() {
       <About />
       <Experience />
       <Projects />
-      <Social />
       <Contact />
       <Footer />
       <GlobalStyle />

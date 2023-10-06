@@ -29,7 +29,10 @@ h2 {
 p,
 span,
 button,
-a {
+a,
+input,
+textarea,
+label {
 	font-family: var(--ff-primary);
 }
 
@@ -39,6 +42,6 @@ a {
 	max-width: 70rem;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	padding: 4rem}
+	padding: 4rem 4rem 0
+}
 	`

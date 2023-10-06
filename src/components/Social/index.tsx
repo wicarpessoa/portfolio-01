@@ -1,4 +1,4 @@
-import { GithubLogo, LinkedinLogo } from '@phosphor-icons/react'
+import { GithubLogo, LinkedinLogo, WhatsappLogo } from '@phosphor-icons/react'
 import { SocialContainer } from './styles'
 
 export function Social() {
@@ -21,6 +21,11 @@ export function Social() {
             rel="noreferrer"
           >
             <LinkedinLogo size={24} />
+          </a>
+        </li>
+        <li>
+          <a href="https://w.app/v5Urfw" target="_blank" rel="noreferrer">
+            <WhatsappLogo size={24} />
           </a>
         </li>
       </ul>

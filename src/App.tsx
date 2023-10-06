@@ -2,6 +2,7 @@ import { NavBar } from './components/NavBar'
 import { Social } from './components/Social'
 import { About } from './sections/About'
 import { Contact } from './sections/Contact'
+import { Footer } from './sections/Footer'
 import { Hero } from './sections/Hero'
 import { Projects } from './sections/Projects'
 import { GlobalStyle } from './styles/Global'
@@ -14,6 +15,7 @@ export function App() {
       <Projects />
       <Social />
       <Contact />
+      <Footer />
       <GlobalStyle />
     </div>
   )

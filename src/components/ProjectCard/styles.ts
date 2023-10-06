@@ -66,8 +66,9 @@ export const ProjectCardImgContainer = styled.div`
   position: absolute;
   right: 0;
   border-radius: 8px;
+  height: 100%;
   > img {
-    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
   }

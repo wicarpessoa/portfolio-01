@@ -23,6 +23,7 @@ const variables = css`
     --orange-500: #e22b00;
     --orange-600: #d13f00;
     --orange-700: #c23400;
+    --orange-700-70: rgba(194, 52, 0, 0.3);
 
     --ff-primary: 'Roboto', sans-serif;
     --ff-title: 'Space Grotesk', sans-serif;

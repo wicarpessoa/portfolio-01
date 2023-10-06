@@ -4,8 +4,8 @@ export const ContactContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: flex-start;
-  width: 100%;
+  padding: 8rem 0;
+
   > h2 {
     font-size: 2rem;
     display: flex;
@@ -16,7 +16,6 @@ export const ContactContainer = styled.section`
   > h3 {
     font-size: 1.5rem;
     display: flex;
-    position: relative;
     white-space: nowrap;
     gap: 0.5rem;
     color: var(--gray-400);
@@ -25,9 +24,9 @@ export const ContactContainer = styled.section`
     content: '04. ';
     font-family: 'Roboto', sans-serif;
     color: var(--orange-300);
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
-    margin: auto 0;
+    margin-top: auto;
   }
   > h2::after {
     content: '';
@@ -40,7 +39,6 @@ export const ContactContainer = styled.section`
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: 100%;
     > label {
       color: var(--gray-100);
       margin-bottom: 8px;

@@ -4,6 +4,7 @@ export const ProjectsContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 8rem 0;
   > h2 {
     font-size: 2rem;
     display: flex;
@@ -16,15 +17,20 @@ export const ProjectsContainer = styled.section`
     content: '02. ';
     font-family: 'Roboto', sans-serif;
     color: var(--orange-300);
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
-    margin: auto 0;
+    margin-top: auto;
   }
   > h2::after {
     content: '';
     background-color: var(--gray-700);
     height: 1px;
-    width: 100%;
+    flex: 1;
     margin: auto 0;
+  }
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
 `

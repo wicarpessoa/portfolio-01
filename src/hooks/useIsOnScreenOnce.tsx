@@ -1,28 +1,35 @@
 import { Variants } from 'framer-motion'
 import { useState, useEffect, RefObject } from 'react'
 
-function useIsOnScreen<T extends Element>(
+function useIsOnScreenOnce<T extends Element>(
   ref: RefObject<T>,
   threshold = 0.5,
 ): boolean {
   const [isIntersecting, setIntersecting] = useState(false)
+  const [animationPlayed, setAnimationPlayed] = useState(false)
 
   useEffect(() => {
+    const currentRef = ref.current
     const observer = new IntersectionObserver(
-      ([entry]) => setIntersecting(entry.isIntersecting),
+      ([entry]) => {
+        if (entry.isIntersecting && !animationPlayed) {
+          setIntersecting(true)
+          setAnimationPlayed(true)
+        }
+      },
       { threshold },
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
+    if (currentRef) {
+      observer.observe(currentRef)
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current)
+      if (currentRef) {
+        observer.unobserve(currentRef)
       }
     }
-  }, [ref, threshold])
+  }, [ref, threshold, animationPlayed])
 
   return isIntersecting
 }
@@ -32,7 +39,7 @@ const staggeredAnimation: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // This is the delay between each child
+      staggerChildren: 0.2,
     },
   },
 }
@@ -42,4 +49,4 @@ const childAnimation: Variants = {
   visible: { opacity: 1, x: 0.2 },
 }
 
-export { useIsOnScreen, staggeredAnimation, childAnimation }
+export { useIsOnScreenOnce, staggeredAnimation, childAnimation }

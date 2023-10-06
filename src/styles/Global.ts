@@ -42,6 +42,7 @@ label {
 	max-width: 70rem;
 	min-height: 100vh;
 	display: grid;
-	padding: 4rem 4rem 0
+	grid-template-rows: auto;
+	padding: 4rem 4rem 0;
 }
 	`

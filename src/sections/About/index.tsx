@@ -3,15 +3,15 @@ import { StackTag } from '../../components/StackTag'
 import {
   childAnimation,
   staggeredAnimation,
-  useIsOnScreen,
-} from '../../hooks/useIsOnScreen'
+  useIsOnScreenOnce,
+} from '../../hooks/useIsOnScreenOnce'
 import { AboutContainer, AboutImgContainer, AboutTextContainer } from './styles'
 import { Atom } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 
 export function About() {
   const ref = useRef<HTMLDivElement | null>(null)
-  const onScreen = useIsOnScreen(ref, 0.3)
+  const onScreen = useIsOnScreenOnce(ref, 0.3)
   console.log(onScreen)
   return (
     <AboutContainer

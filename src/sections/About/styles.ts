@@ -7,6 +7,7 @@ export const AboutContainer = styled(motion.section)<MotionProps>`
   align-items: flex-start;
   margin: 0 auto;
   gap: 3rem;
+  padding: 8rem 0;
 `
 export const AboutTextContainer = styled(motion.div)<MotionProps>`
   display: flex;
@@ -24,9 +25,9 @@ export const AboutTextContainer = styled(motion.div)<MotionProps>`
     content: '01. ';
     font-family: 'Roboto', sans-serif;
     color: var(--orange-300);
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-align: left;
-    margin: auto 0;
+    margin-top: auto;
   }
   > h2::after {
     content: '';
@@ -43,7 +44,6 @@ export const AboutTextContainer = styled(motion.div)<MotionProps>`
     flex-wrap: wrap;
     gap: 8px;
   }
-
   ul > li {
     list-style: none;
   }

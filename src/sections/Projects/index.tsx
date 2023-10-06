@@ -5,7 +5,11 @@ export function Projects() {
   return (
     <ProjectsContainer id="projetos">
       <h2>Projetos</h2>
-      <ProjectCard />
+      <div>
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
     </ProjectsContainer>
   )
 }

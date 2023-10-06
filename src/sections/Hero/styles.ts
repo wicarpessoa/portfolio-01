@@ -1,6 +1,7 @@
+import { MotionProps, motion } from 'framer-motion'
 import styled from 'styled-components'
 
-export const HeroContainer = styled.section`
+export const HeroContainer = styled(motion.section)<MotionProps>`
   display: flex;
   flex-direction: column;
   color: white;

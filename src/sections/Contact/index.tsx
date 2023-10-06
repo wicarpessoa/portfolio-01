@@ -51,7 +51,9 @@ export function Contact() {
       </form>
       <div>ou</div>
       <h3>Por Whatsapp:</h3>
-      <Button title="WhatsApp" />
+      <a href="https://w.app/v5Urfw">
+        <Button title="Whatsapp" />
+      </a>
     </ContactContainer>
   )
 }

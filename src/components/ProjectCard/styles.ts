@@ -10,6 +10,8 @@ export const ProjectCardTextContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
   grid-column: 7 / 1;
   > span {
     color: var(--orange-300);

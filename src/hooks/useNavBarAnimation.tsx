@@ -4,6 +4,7 @@ import { useAnimation } from 'framer-motion'
 export function useNavBarAnimation(isSidebarOpen: boolean) {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [shouldShowActions, setShouldShowActions] = useState(true)
+  const scrollThreshold = 20
   const controls = useAnimation()
 
   useEffect(() => {
@@ -11,7 +12,10 @@ export function useNavBarAnimation(isSidebarOpen: boolean) {
       if (isSidebarOpen) return
 
       const scrollY = window.scrollY
+      const scrollDistance = Math.abs(scrollY - lastScrollY)
       const scrollUp = scrollY < lastScrollY
+
+      if (scrollDistance <= scrollThreshold) return
 
       if (scrollUp) {
         setShouldShowActions(true)

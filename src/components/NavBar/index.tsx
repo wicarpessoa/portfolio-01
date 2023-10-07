@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { SideBar } from '../SideBar'
 
 export function NavBar() {
-  const [isOpen, setIsOpen] = useState<boolean>(true)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const controls = useNavBarAnimation(isOpen)
 

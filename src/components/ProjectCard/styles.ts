@@ -17,7 +17,7 @@ export const ProjectCardTextContainer = styled.div`
     color: var(--orange-300);
   }
   > a {
-    font-size: 2rem;
+    font-size: 18px;
     color: var(--gray-300);
     margin-top: 1rem;
     text-decoration: none;

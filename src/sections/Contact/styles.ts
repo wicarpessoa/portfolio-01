@@ -54,7 +54,7 @@ export const ContactContainer = styled(motion.section)<MotionProps>`
       color: var(--gray-100);
       margin-bottom: 16px;
       border-radius: 4px;
-      font-size: 1rem;
+      font-size: 18px;
     }
     > textarea {
       resize: none;
@@ -65,7 +65,7 @@ export const ContactContainer = styled(motion.section)<MotionProps>`
       color: var(--gray-100);
       border-radius: 4px;
       width: 100%;
-      font-size: 1rem;
+      font-size: 18px;
       margin-bottom: 2rem;
     }
     > button {

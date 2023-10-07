@@ -80,6 +80,7 @@ export const Overlay = styled(motion.div)`
   display: none;
   @media (max-width: 768px) {
     position: fixed;
+    display: block;
     top: 0;
     left: 0;
     right: 0;

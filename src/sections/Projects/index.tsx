@@ -28,7 +28,7 @@ const projectsContent: ProjectCardProps[] = [
     description:
       'Este aplicativo permite que você gerencie suas tarefas (to-dos) com uma interface amigável e moderna. O projeto foi construído usando React, Vite, CSS Modules e TypeScript.',
     tags: ['React.js', 'TypeScript', 'Css-Modules'],
-    deployUrl: '',
+    deployUrl: 'https://ignite-to-dos.vercel.app/',
     repoUrl: 'ignite-toDos',
     imgUrl: 'https://i.imgur.com/gcRAcwz.png',
   },

@@ -7,19 +7,13 @@ interface SideBarProps extends MotionProps {
 
 const SideBarContainerStyleMobileOpen = `
   
-  height: 100vh;
-  width: 50%;
   background-color: var(--gray-900);
   z-index: 4;
-  padding: 0.5rem 2rem;
   flex-direction:column;
   align-items:center;
- 
 `
 const SideBarContainerStyleMobileClosed = `
   
-  height: 4rem;
-  width: 4rem ;
   z-index: 4;
   align-items: center;
   justify-content: center;
@@ -34,7 +28,7 @@ export const SidebarContainer = styled(motion.aside)<SideBarProps>`
     display: flex;
     list-style: none;
     gap: 2rem;
-
+    margin-top: 5rem;
     flex-direction: column;
     > li {
       a {
@@ -45,6 +39,7 @@ export const SidebarContainer = styled(motion.aside)<SideBarProps>`
   @media (max-width: 768px) {
     position: fixed;
     display: flex;
+    align-items: center;
     ${(props) =>
       props.isOpen
         ? css`

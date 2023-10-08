@@ -8,13 +8,40 @@ interface SideBarProps {
   isOpen: boolean
 }
 
+const sidebarVariants = {
+  open: {
+    height: '100vh',
+    width: '50%',
+    transition: { duration: 0.5, ease: 'easeInOut' },
+  },
+  closed: {
+    height: '4rem',
+    width: '4rem',
+    transition: { duration: 0.5, ease: 'easeInOut' },
+  },
+}
+
+// Define animation variants for the overlay
+const overlayVariants = {
+  open: { opacity: 1, transition: { duration: 0.3 } },
+  closed: { opacity: 0, transition: { duration: 0.3 } },
+}
+
 export function SideBar({ onClick, isOpen }: SideBarProps) {
   return (
     <>
-      <SidebarContainer isOpen={isOpen}>
+      <SidebarContainer
+        isOpen={isOpen}
+        initial="closed"
+        animate={isOpen ? 'open' : 'closed'}
+        variants={sidebarVariants}
+      >
         {isOpen ? (
           <>
-            <NavBarButton onClick={onClick}>
+            <NavBarButton
+              aria-label={isOpen ? 'Close Sidebar' : 'Open Sidebar'}
+              onClick={onClick}
+            >
               <X size={24} />
             </NavBarButton>
             <ul>
@@ -33,7 +60,10 @@ export function SideBar({ onClick, isOpen }: SideBarProps) {
             </ul>
           </>
         ) : (
-          <NavBarButton onClick={onClick}>
+          <NavBarButton
+            aria-label={isOpen ? 'Close Sidebar' : 'Open Sidebar'}
+            onClick={onClick}
+          >
             <List size={24} />
           </NavBarButton>
         )}

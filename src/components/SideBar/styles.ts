@@ -38,7 +38,7 @@ export const SidebarContainer = styled(motion.aside)<SideBarProps>`
     flex-direction: column;
     > li {
       a {
-        font-size: 18px;
+        font-size: 1rem;
       }
     }
   }

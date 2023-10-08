@@ -10,6 +10,7 @@ export const HeroContainer = styled(motion.section)<MotionProps>`
   height: 100vh;
   > span {
     color: var(--orange-300);
+    font-size: 16px;
   }
   > h1 {
     font-size: 5rem;
@@ -21,6 +22,7 @@ export const HeroContainer = styled(motion.section)<MotionProps>`
     margin-bottom: 2rem;
   }
   > p {
+    font-size: 18px;
     max-width: 30rem;
     margin-bottom: 1rem;
   }

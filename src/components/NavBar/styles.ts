@@ -35,7 +35,7 @@ export const NavItem = styled.li<NavItemProps>`
   > a {
     text-decoration: none;
     color: var(--gray-300);
-    font-size: 18px;
+    font-size: 1.2rem;
     transition: var(--trasition);
     white-space: nowrap;
     &:hover {

@@ -15,7 +15,7 @@ export const ProjectsContainer = styled(motion.section)<MotionProps>`
     color: var(--gray-100);
   }
   > h2::before {
-    content: '02. ';
+    content: '03. ';
     font-family: 'Roboto', sans-serif;
     color: var(--orange-300);
     font-size: 1.2rem;

@@ -41,6 +41,7 @@ export const AboutTextContainer = styled(motion.div)<MotionProps>`
     margin: auto 0;
   }
   > p {
+    font-size: 1rem;
     color: var(--gray-400);
   }
   > ul {
@@ -50,14 +51,18 @@ export const AboutTextContainer = styled(motion.div)<MotionProps>`
   }
   ul > li {
     list-style: none;
+    font-size: 1rem;
   }
 `
 export const AboutImgContainer = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
   transition: var(--trasition);
   img {
     width: 17rem;
     height: 17rem;
+    object-fit: cover;
     border-radius: 4px;
   }
   > div {

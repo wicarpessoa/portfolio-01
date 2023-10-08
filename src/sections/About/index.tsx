@@ -5,7 +5,6 @@ import {
   useIsOnScreenOnce,
 } from '../../hooks/useIsOnScreenOnce'
 import { AboutContainer, AboutImgContainer, AboutTextContainer } from './styles'
-import { Atom } from '@phosphor-icons/react'
 const experienceTags = [
   {
     title: 'React.js',
@@ -66,16 +65,14 @@ export function About() {
           {experienceTags.map((experienceTag) => {
             return (
               <li key={experienceTag.title}>
-                <StackTag title={experienceTag.title}>
-                  <Atom size={20} />
-                </StackTag>
+                <StackTag title={experienceTag.title} />
               </li>
             )
           })}
         </ul>
       </AboutTextContainer>
       <AboutImgContainer>
-        <img src="./src/assets/profile.jpg" alt="" />
+        <img src="https://i.imgur.com/NRcMCyj.jpg" alt="" />
         <div />
       </AboutImgContainer>
     </AboutContainer>

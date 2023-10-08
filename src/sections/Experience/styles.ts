@@ -14,6 +14,9 @@ export const ExperienceContainer = styled(motion.section)<MotionProps>`
     > ul {
       list-style: none;
       border-left: 2px solid var(--gray-700);
+      > li {
+        font-size: 1rem;
+      }
     }
   }
   > h2 {
@@ -25,7 +28,7 @@ export const ExperienceContainer = styled(motion.section)<MotionProps>`
     color: var(--gray-100);
   }
   > h2::before {
-    content: '01. ';
+    content: '02. ';
     font-family: 'Roboto', sans-serif;
     color: var(--orange-300);
     font-size: 1.2rem;
@@ -54,9 +57,12 @@ export const ExperienceContentContainer = styled.div`
     opacity: 1;
 
     > h3 {
+      font-size: 1.2rem;
+
       color: var(--gray-100);
     }
     > span {
+      font-size: 1rem;
       color: var(--orange-100);
     }
     p {

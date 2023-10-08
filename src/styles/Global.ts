@@ -20,7 +20,6 @@ body {
 
 	font-family: var(--ff-primary);
 	background-color: var(--gray-900);
-
 }
 h1,
 h2 {
@@ -36,6 +35,10 @@ input,
 textarea,
 label {
 	font-family: var(--ff-primary);
+}
+
+input {
+	font-size:1.2rem
 }
 
 .container {

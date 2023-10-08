@@ -71,10 +71,10 @@ export function About() {
           })}
         </ul>
       </AboutTextContainer>
-      <AboutImgContainer>
+      {/* <AboutImgContainer>
         <img src="https://i.imgur.com/NRcMCyj.jpg" alt="" />
         <div />
-      </AboutImgContainer>
+      </AboutImgContainer> */}
     </AboutContainer>
   )
 }

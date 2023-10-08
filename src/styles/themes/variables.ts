@@ -29,7 +29,7 @@ const variables = css`
     --ff-primary: 'Roboto', sans-serif;
     --ff-title: 'Space Grotesk', sans-serif;
 
-    --trasition: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+    --transition: 400ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 `
 export { variables }

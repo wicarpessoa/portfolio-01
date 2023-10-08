@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 export const ProjectCardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -7,25 +8,35 @@ export const ProjectCardContainer = styled.div`
 
 export const ProjectCardTextContainer = styled.div`
   z-index: 1;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   grid-column: 7 / 1;
+  grid-row: 1;
+
+  > span,
+  > a,
+  > div:nth-child(3),
+  > ul {
+    position: relative;
+    z-index: 3;
+  }
+
   > span {
     color: var(--orange-300);
   }
+
   > a {
     font-size: 1rem;
     color: var(--gray-300);
     margin-top: 1rem;
     text-decoration: none;
-    transition: var(--trasition);
+    transition: var(--transition);
     &:hover {
       color: var(--orange-700);
     }
   }
+
   > div:nth-child(3) {
     margin-top: 1rem;
     background-color: var(--gray-800);
@@ -33,9 +44,10 @@ export const ProjectCardTextContainer = styled.div`
     border-radius: 4px;
     color: var(--gray-100);
     box-shadow:
-      0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
+      0 10px 15px -3px rgb(0 0 0 / 10%),
+      0 4px 6px -4px rgb(0 0 0 / 10%);
   }
+
   > ul {
     width: 100%;
     display: flex;
@@ -45,9 +57,8 @@ export const ProjectCardTextContainer = styled.div`
     margin-top: 2rem;
     flex-wrap: wrap;
     white-space: nowrap;
-    > li {
-    }
   }
+
   div:nth-child(5) {
     margin-top: 8px;
     > a {
@@ -56,16 +67,13 @@ export const ProjectCardTextContainer = styled.div`
       text-decoration: none;
       cursor: pointer;
       color: var(--gray-300);
-
       transition: 0.5s all;
       &:hover {
         color: var(--orange-300);
       }
-      > svg {
-        align-self: center;
-      }
     }
   }
+
   @media (max-width: 768px) {
     grid-area: 1/1/-1/-1;
     padding: 1rem;
@@ -76,12 +84,12 @@ export const ProjectCardTextContainer = styled.div`
 `
 
 export const ProjectCardImgContainer = styled.div`
-  grid-area: 1 / 6/-1 / -1;
-  position: absolute;
-  right: 0;
+  grid-area: 1 / 5 / -1 / -1;
+  position: relative;
   border-radius: 8px;
   height: 100%;
-  overflow: hidden;
+  z-index: 0;
+
   > img {
     width: 100%;
     height: 100%;
@@ -89,6 +97,7 @@ export const ProjectCardImgContainer = styled.div`
     object-position: center;
     border-radius: 8px;
   }
+
   > a {
     position: absolute;
     display: block;
@@ -97,16 +106,14 @@ export const ProjectCardImgContainer = styled.div`
     top: 0;
     left: 0;
     border-radius: 8px;
-
     cursor: pointer;
-
     background-color: var(--orange-700-30);
-
     transition: 0.5s all;
     &:hover {
       opacity: 0;
     }
   }
+
   @media (max-width: 768px) {
     grid-area: 1/1/-1/-1;
     > a {

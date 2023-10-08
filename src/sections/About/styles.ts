@@ -58,7 +58,7 @@ export const AboutImgContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  transition: var(--trasition);
+  transition: var(--transition);
   img {
     width: 17rem;
     height: 17rem;
@@ -76,7 +76,7 @@ export const AboutImgContainer = styled.div`
 
     background-color: var(--orange-300);
     opacity: 0.3;
-    transition: var(--trasition);
+    transition: var(--transition);
     &:hover {
       opacity: 0;
     }
@@ -95,7 +95,7 @@ export const AboutImgContainer = styled.div`
     top: 1rem;
     left: 1rem;
     border-radius: 4px;
-    transition: var(--trasition);
+    transition: var(--transition);
   }
   &:hover::after {
     transform: translate(10px, 10px);

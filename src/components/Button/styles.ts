@@ -7,7 +7,7 @@ export const ButtonContainer = styled.button`
   border-radius: 4px;
   color: var(--orange-300);
   position: relative;
-  transition: var(--trasition);
+  transition: var(--transition);
   outline: none;
   cursor: pointer;
 

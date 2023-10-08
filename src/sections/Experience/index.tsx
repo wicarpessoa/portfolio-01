@@ -15,14 +15,19 @@ export function Experience() {
       value: 'tab1',
       title: 'Freelancer',
       office: 'UI Engineer Co-op @ Apple',
-      content: ['Freelance 1', 'Freelance 2'],
+      content: [
+        'Atuação como freelancer em desenvolvimento Front-End, especializado em React e Node (express) para criação de soluções web personalizadas',
+      ],
       period: 'Fev 2023 - Presente',
     },
     {
       value: 'tab2',
       title: 'Olkeey',
-      office: 'Front end Olkeey',
-      content: ['Item 1', 'Item 2', 'Item 3'],
+      office: 'Dev Front-End @Olkeey',
+      content: [
+        'Utilização de React e React Native na construção de interfaces web e mobile de alta qualidade, otimizadas para desempenho e usabilidade.',
+        'Trabalho em um ambiente ágil adotando a metodologia Scrum, colaborando ativamente com equipes multidisciplinares para entregas incrementais e eficientes ',
+      ],
       period: 'março 2022 - fev 2023',
     },
   ]

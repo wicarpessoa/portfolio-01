@@ -18,7 +18,7 @@ export const SocialContainer = styled.div`
     cursor: pointer;
     color: var(--gray-300);
 
-    transition: var(--trasition);
+    transition: var(--transition);
     &:hover {
       color: var(--orange-300);
     }

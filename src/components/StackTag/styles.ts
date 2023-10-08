@@ -13,7 +13,7 @@ export const StackTagContainer = styled.a`
   white-space: nowrap;
 
   border-radius: 4px;
-  transition: 0.5s all;
+  transition: var(--transition);
   &:hover {
     background-color: var(--gray-800);
     color: var(--orange-700);

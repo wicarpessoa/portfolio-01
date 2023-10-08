@@ -42,6 +42,18 @@ export const ExperienceContainer = styled(motion.section)<MotionProps>`
     width: 100%;
     margin: auto 0;
   }
+  @media (max-width: 768px) {
+    > div {
+      flex-direction: column;
+      gap: 1rem;
+      > ul {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid var(--gray-700);
+        border-left: none;
+      }
+    }
+  }
 `
 export const ExperienceContentContainer = styled.div`
   display: flex;
@@ -66,7 +78,7 @@ export const ExperienceContentContainer = styled.div`
       color: var(--orange-100);
     }
     p {
-      color: var(--gray-600);
+      color: var(--gray-400);
       &::before {
         content: '- ';
       }

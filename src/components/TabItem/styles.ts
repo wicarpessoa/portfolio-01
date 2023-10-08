@@ -16,6 +16,16 @@ export const TabItemContainer = styled.div`
     background-color: var(--orange-700);
   }
   &:hover {
-    background-color: var(--orange-700-70);
+    background-color: var(--orange-700-30);
+  }
+  @media (max-width: 768px) {
+    > div {
+      left: 0;
+      right: 0;
+      height: 2px;
+      bottom: -2px;
+      top: auto;
+      width: 100%;
+    }
   }
 `

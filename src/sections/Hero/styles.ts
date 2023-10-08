@@ -22,7 +22,7 @@ export const HeroContainer = styled(motion.section)<MotionProps>`
     margin-bottom: 2rem;
   }
   > p {
-    font-size: 18px;
+    font-size: 1.125rem;
     max-width: 30rem;
     margin-bottom: 1rem;
   }

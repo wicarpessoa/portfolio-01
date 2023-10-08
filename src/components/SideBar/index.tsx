@@ -68,7 +68,14 @@ export function SideBar({ onClick, isOpen }: SideBarProps) {
           </NavBarButton>
         )}
       </SidebarContainer>
-      {isOpen && <Overlay onClick={onClick} />}
+      {isOpen && (
+        <Overlay
+          onClick={onClick}
+          initial="closed"
+          animate={isOpen ? 'open' : 'closed'}
+          variants={overlayVariants}
+        />
+      )}
     </>
   )
 }

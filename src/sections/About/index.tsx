@@ -27,7 +27,7 @@ const experienceTags = [
 ]
 export function About() {
   const ref = useRef<HTMLDivElement | null>(null)
-  const onScreen = useIsOnScreenOnce(ref, 0.7)
+  const onScreen = useIsOnScreenOnce(ref, 0.3)
   console.log(onScreen)
   return (
     <AboutContainer
@@ -71,10 +71,10 @@ export function About() {
           })}
         </ul>
       </AboutTextContainer>
-      {/* <AboutImgContainer>
+      <AboutImgContainer>
         <img src="https://i.imgur.com/NRcMCyj.jpg" alt="" />
         <div />
-      </AboutImgContainer> */}
+      </AboutImgContainer>
     </AboutContainer>
   )
 }

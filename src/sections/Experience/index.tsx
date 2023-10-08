@@ -14,7 +14,7 @@ export function Experience() {
     {
       value: 'tab1',
       title: 'Freelancer',
-      office: 'UI Engineer Co-op @ Apple',
+      office: 'Dev Full-Stack @Freelancer',
       content: [
         'Atuação como freelancer em desenvolvimento Front-End, especializado em React e Node (express) para criação de soluções web personalizadas',
       ],

@@ -25,7 +25,7 @@ export function ProjectCard({
   return (
     <ProjectCardContainer>
       <ProjectCardTextContainer>
-        <span>Featured Project</span>
+        <span>Projeto em destaque</span>
         <a href={deployUrl} target="_blank" rel="noreferrer">
           {title}
         </a>

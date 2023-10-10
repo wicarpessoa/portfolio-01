@@ -7,22 +7,22 @@ import {
 import { ProjectsContainer } from './styles'
 
 const projectsContent: ProjectCardProps[] = [
-  {
-    title: 'Video player usando Redux',
-    description:
-      'Esta aplicação permite assistir vídeos do YouTube usando Redux ou (Zustand) para gerenciamento de estado. Ela oferece uma interface amigável para transmitir vídeos do YouTube.',
-    tags: [
-      'React.js',
-      'TypeScript',
-      'Redux',
-      'Zustand',
-      'Tailwind.css',
-      'Vitest',
-    ],
-    deployUrl: '',
-    repoUrl: 'video-player-redux-zustand',
-    imgUrl: 'https://i.imgur.com/RilVzcA.png',
-  },
+  // {
+  //   title: 'Video player usando Redux',
+  //   description:
+  //     'Esta aplicação permite assistir vídeos do YouTube usando Redux ou (Zustand) para gerenciamento de estado. Ela oferece uma interface amigável para transmitir vídeos do YouTube.',
+  //   tags: [
+  //     'React.js',
+  //     'TypeScript',
+  //     'Redux',
+  //     'Zustand',
+  //     'Tailwind.css',
+  //     'Vitest',
+  //   ],
+  //   deployUrl: '',
+  //   repoUrl: 'video-player-redux-zustand',
+  //   imgUrl: 'https://i.imgur.com/RilVzcA.png',
+  // },
   {
     title: 'Ignite to do',
     description:

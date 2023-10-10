@@ -72,7 +72,7 @@ export function Contact() {
           required
           cols={30}
           rows={10}
-          placeholder="Me envie uma messagem..."
+          placeholder="Me envie uma mensagem..."
           name="message"
         />
         <Button title="Mandar email" />
